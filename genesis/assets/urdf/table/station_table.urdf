@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot name="station_table_top">
+  <link name="station_table_top">
+    <inertial>
+      <origin xyz="5.43e-05 -0.0196 0.0505" rpy="0 0 0"/>
+      <mass value="0.136"/>
+      <inertia ixx="0.000109" ixy="-0.000000" ixz="0.000000"
+               iyy="0.000128" iyz="-0.000000" izz="0.000054"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0.0 0.0 -0.109525" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.715 1.4 0.21905"/>
+        <!-- <mesh filename="package://meshes/station_natural_brown_table_top.gltf" scale="1.0 1.0 1.0"/> -->
+      </geometry>
+    </visual>
+
+    <collision name="table_top_collision_box">
+      <origin xyz="0.0 0.0 -0.109525" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.715 1.4 0.21905"/>
+      </geometry>
+    </collision>
+
+    <collision name="table_cart_platform_back_collision_box">
+      <origin xyz="0.17844 0.20623 -0.03905" rpy="0.0 0.0 0.7854"/>
+      <geometry>
+        <box size="0.04 0.54397 0.04"/>
+      </geometry>
+    </collision>
+
+    <collision name="table_cart_platform_front_collision_box">
+      <origin xyz="-0.17844 -0.20623 -0.03905" rpy="0.0 0.0 0.7854"/>
+      <geometry>
+        <box size="0.04 0.54397 0.04"/>
+      </geometry>
+    </collision>
+
+    <collision name="table_cart_platform_left_collision_box">
+      <origin xyz="-0.20623 0.17844 -0.03905" rpy="0.0 0.0 0.7854"/>
+      <geometry>
+        <box size="0.54397 0.04 0.04"/>
+      </geometry>
+    </collision>
+
+    <collision name="table_cart_platform_right_collision_box">
+      <origin xyz="0.20623 -0.17844 -0.03905" rpy="0.0 0.0 0.7854"/>
+      <geometry>
+        <box size="0.54397 0.04 0.04"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

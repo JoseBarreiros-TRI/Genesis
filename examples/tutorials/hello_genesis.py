@@ -1,8 +1,14 @@
 import genesis as gs
 
-gs.init(backend=gs.cpu)
+gs.init(backend=gs.gpu)
 
-scene = gs.Scene()
+scene = gs.Scene(
+        show_viewer=True,
+        sim_options=gs.options.SimOptions(
+        dt=0.01,
+        gravity=(0, 0, -10.0)
+        ),
+    )
 
 plane = scene.add_entity(
     gs.morphs.Plane(),
@@ -16,5 +22,5 @@ franka = scene.add_entity(
 )
 
 scene.build()
-for i in range(1000):
+for i in range(100):
     scene.step()
