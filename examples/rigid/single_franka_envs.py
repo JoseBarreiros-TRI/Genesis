@@ -54,12 +54,14 @@ def main():
         GUI=True,
     )
     ########################## build ##########################
-    scene.build(n_envs=args.num_env, env_spacing=(0.5, 0.5))
+    scene.build(n_envs=args.num_env,
+                # env_spacing=(0.5, 0.5),
+                )
 
     if args.record:
         cam_0.start_recording()
 
-    horizon = 1000
+    horizon = 200
     for i in range(horizon):
         scene.step()
 

@@ -155,9 +155,10 @@ def main():
 
     ########################## forward + backward twice ##########################
     scene.reset()
-    horizon = 2000
+    horizon = 10
 
     for i in range(horizon):
+        # breakpoint()
         scene.step()
         cam_0.render()
 

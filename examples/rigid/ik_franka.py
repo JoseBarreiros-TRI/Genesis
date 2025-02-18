@@ -23,11 +23,15 @@ def main():
             camera_fov=40,
             max_FPS=200,
         ),
+        sim_options=gs.options.SimOptions(
+            dt=0.01,
+        ),
         show_viewer=args.vis,
         rigid_options=gs.options.RigidOptions(
-            enable_joint_limit=False,
-            enable_collision=False,
-            gravity=(0, 0, -0),
+            # enable_joint_limit=False,
+            # enable_collision=False,
+            enable_self_collision=True,
+            gravity=(0, 0, -10),
         ),
     )
 
